@@ -4,26 +4,71 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
         <title>Tony Tamplin</title>
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="javascripts/respond.js"></script>
-        <link rel="stylesheet" type="text/css" href="stylesheets/slideshow.css" />
-
-        <!--[if lt IE 9]>
-        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <!--[if lt IE 8]>
-        <link rel="stylesheet" href="stylesheets/ie.css">
-        <![endif]-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+        <link type="text/css" rel="stylesheet/less" href="css/tonytamplin.less" />
+        <script src="js/less-1.3.3.min.js" type="text/javascript">
+            less = {
+                env: "development", // or "production"
+                async: true,       // load imports async
+                fileAsync: true,   // load imports async when in a page under
+                                    // a file protocol
+                poll: 1000,         // when in watch mode, time in ms between polls
+                functions: {},      // user functions, keyed by name
+                dumpLineNumbers: "comments", // or "mediaquery" or "all"
+                relativeUrls: false,// whether to adjust url's to be relative
+                                    // if false, url's are already relative to the
+                                    // entry less file
+                rootpath: ":/a.com/"// a path to add on to the start of every url
+                                    //resource
+            };
+        </script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        <script type="text/javascript" src="js/rhinoslider-1.05.min.js"></script>
+        <script type="text/javascript" src="js/mousewheel.js"></script>
+        <script type="text/javascript" src="js/easing.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     </head>
     <body>
-        <div class="wrapper">
-            
+        <div class="title">Tony Tamplin</div>
+        <div class="nav-main">
+            <div class="nav-links">
+                <span>home</span>
+                <span>about</span>
+                <span>contact</span>
+            </div>
         </div>
-        <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+        <div class="slider-container">
+            <div id="page">
+                <ul id="slider">
+                    <li><img src="img/slider/01.jpg" alt="" width="1000px" height="600px"/></li>
+                    <li><img src="img/slider/02.jpg" alt="" width="1000px" height="600px"/></li>
+                    <li><img src="img/slider/03.jpg" alt="" width="1000px" height="600px"/></li>
+                    <li><img src="img/slider/06.jpg" alt="" width="1000px" height="600px"/></li>
+                    <li><img src="img/slider/07.jpg" alt="" width="1000px" height="600px"/></li>
+                    <li><img src="img/slider/08.jpg" alt="" width="1000px" height="600px"/></li>
+                    <li><img src="img/slider/09.jpg" alt="" width="1000px" height="600px"/></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social-icons">
+            <img src="img/linkedin-icon.png"/>
+            <img src="img/facebook-icon.png"/>
+            <img src="img/googleplus-icon.png"/>
+            <img src="img/steam-icon.png"/>
+            <img src="img/lastfm-icon.png"/>
+        </div>
         <script type="text/javascript">
-            $(function(){
-
+            $(document).ready(function() {
+                $('#slider').rhinoslider({
+                    showTime: 4000,
+                    controlsMousewheel: false,
+                    autoPlay: true,
+                    showBullets: 'never',
+                    changeBullets: 'before',
+                    slidePrevDirection: 'toRight',
+                    slideNextDirection: 'toLeft'
+                });
             });
         </script>
     </body>
