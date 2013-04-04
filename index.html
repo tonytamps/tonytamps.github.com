@@ -1,86 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1">
-        <title>Tony Tamplin</title>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-        <link type="text/css" rel="stylesheet/less" href="css/tonytamplin.less" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+        <title>Tony Tamplin - Portfolio</title>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
           ga('create', 'UA-39532949-1', 'tonytamplin.com');
           ga('send', 'pageview');
-
         </script>
-        <script src="js/less-1.3.3.min.js" type="text/javascript">
-            less = {
-                env: "development", // or "production"
-                async: true,       // load imports async
-                fileAsync: true,   // load imports async when in a page under
-                                    // a file protocol
-                poll: 1000,         // when in watch mode, time in ms between polls
-                functions: {},      // user functions, keyed by name
-                dumpLineNumbers: "comments", // or "mediaquery" or "all"
-                relativeUrls: false,// whether to adjust url's to be relative
-                                    // if false, url's are already relative to the
-                                    // entry less file
-                rootpath: ":/a.com/"// a path to add on to the start of every url
-                                    //resource
-            };
-        </script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-        <script type="text/javascript" src="js/rhinoslider-1.05.min.js"></script>
-        <script type="text/javascript" src="js/mousewheel.js"></script>
-        <script type="text/javascript" src="js/easing.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    </head>
-    <body>
-        <div class="title">Tony Tamplin</div>
-        <div class="nav-main">
-            <div class="nav-links">
-                <span>home</span>
-                <span>about</span>
-                <span>contact</span>
-            </div>
-        </div>
-        <div class="slider-container">
-            <div id="page">
-                <ul id="slider">
-                    <li><img src="img/slider/06.jpg" alt="" width="1000px" height="600px"/></li>
-                    <li><img src="img/slider/01.jpg" alt="" width="1000px" height="600px"/></li>
-                    <li><img src="img/slider/02.jpg" alt="" width="1000px" height="600px"/></li>
-                    <li><img src="img/slider/03.jpg" alt="" width="1000px" height="600px"/></li>
-                    <li><img src="img/slider/07.jpg" alt="" width="1000px" height="600px"/></li>
-                    <li><img src="img/slider/08.jpg" alt="" width="1000px" height="600px"/></li>
-                    <li><img src="img/slider/09.jpg" alt="" width="1000px" height="600px"/></li>
-                </ul>
-            </div>
-        </div>
-        <div class="social-icons">
-            <a href="https://github.com/tonytamps/"><img src="img/github-icon.png"/></a>
-            <a href="http://au.linkedin.com/in/tonytamps/"><img src="img/linkedin-icon.png"/></a>
-            <a href="http://www.facebook.com/tonytamps"><img src="img/facebook-icon.png"/></a>
-            <a href="https://plus.google.com/u/0/104327168618872925352"><img src="img/googleplus-icon.png"/></a>
-            <a href="http://steamcommunity.com/id/ColouredCats/"><img src="img/steam-icon.png"/></a>
-            <a href="http://www.last.fm/user/hooogy"><img src="img/lastfm-icon.png"/></a>
-            <a href="http://instagram.com/tonytamps"><img src="img/instagram-icon.png"/></a>
-        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script type="text/javascript">
-            $(document).ready(function() {
-                $('#slider').rhinoslider({
-                    showTime: 4000,
-                    controlsMousewheel: false,
-                    autoPlay: true,
-                    showBullets: 'never',
-                    changeBullets: 'before',
-                    slidePrevDirection: 'toRight',
-                    slideNextDirection: 'toLeft'
-                });
+            var timeline_config = {
+                width:              '100%',
+                height:             '800',
+                source:             'https://docs.google.com/spreadsheet/pub?key=0Al5Vl5byTfItdFY0dUlIdC1JUnVuNGVsaWtDRFgtOHc&output=html',
+                embed_id:           'timeline-embed',             
+                start_at_end:       false,                         
+                start_zoom_adjust:  '3',                           
+                hash_bookmark:      true,                           
+                font:               'Bevan-PotanoSans',            
+                debug:              false,                           
+                maptype:            'terrain',                  
+                css:                '/timeline/css/themes/dark.css',     
+                js:                 '/timeline/js/timeline.js'    
+            }
+        </script>
+        <link rel="stylesheet" href="/timeline/css/timeline-custom.css" />
+    </head>
+    <body>  
+        <div id="timeline-embed"></div>
+         
+        <script type="text/javascript" src="/timeline/js/storyjs-embed.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $('#timeline-embed').height($(window).height());
             });
         </script>
     </body>
