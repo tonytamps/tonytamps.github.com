@@ -1,44 +1,41 @@
 @import "variables.less";
-@import "rhinoslider-1.05.less";
+
+html, body {
+    background-color: #666666;
+}
 
 body {
-
-    .title {
-        font-family: 'Rock Salt', cursive;
-        font-size: 64px;
-        text-align: center;
-        color: @white;
-        height: 200px;
-    }
-
-    .nav-main {
+    .banner {
+        span { position: absolute; bottom: 50%; left: 41%; }
+        h1 { font-size: 64px; text-align: center; font-family: 'Montserrat Subrayada', sans-serif; position: absolute; bottom: 45px; left: 15px; }
+        h2 { line-height: 30px; position: absolute; bottom: 2px; left: 15px; }
+        background: black;
+        border-radius: 5px;
+        margin-top: 10px;
         position: relative;
-        .nav-links {
-            color: @white;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 300;
-            font-size: 32px;
-            position: absolute; 
-            bottom: 0; 
-            right: 10px;
-            span {
-                margin-right: 15px;
-            }
-        }
+        width: 80%;
+        height: 500px;
+        border: 2px solid black;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .slider-container {
-        background-color: @greyDark;
+    .desaturate { 
+        &:hover { filter: none; -webkit-filter: grayscale(0); }
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        filter: grayscale(100%);
     }
 
     .social-icons {
+        img { width: 32px; height: 32px; }
+        position:absolute;
+        bottom:20px;
+        width: 325px;
+        display: block;
         margin-top: 10px;
         margin-left: auto;
         margin-right: auto;
-        width: 248px;
-        img {
-            width: 32px;
-            height: 32px;
-        }
     }
 }
