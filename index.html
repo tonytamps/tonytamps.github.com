@@ -58,12 +58,18 @@
         </div>
         <script type="text/javascript">
             $(function(){
+                positionIcons();
+                $('[data-toggle=tooltip]').tooltip();
+            });
+            $(window).resize(function() {
+              positionIcons()
+            });
+            function positionIcons(){
                 $('.social-icons').css({
                     position:'absolute',
                     left: ($(window).width() - $('.social-icons').outerWidth())/2
                 });
-                $('[data-toggle=tooltip]').tooltip();
-            });
+            }
         </script>
     </body>
 </html>
