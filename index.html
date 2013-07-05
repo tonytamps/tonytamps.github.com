@@ -12,6 +12,8 @@
           ga('create', 'UA-39532949-1', 'tonytamplin.com');
           ga('send', 'pageview');
         </script>
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Montserrat+Subrayada' rel='stylesheet' type='text/css'>
         <!-- Less -->
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link rel="stylesheet/less" type="text/css" href="/css/tonytamplin.less" />
@@ -21,7 +23,6 @@
                 async: false,
                 fileAsync: false,
                 poll: 1000,
-                functions: {},
                 dumpLineNumbers: "comments",
                 relativeUrls: false
             };
@@ -31,47 +32,101 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
         <script src="/js/jquery.stellar.min.js"></script>
-        <!-- Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Montserrat+Subrayada' rel='stylesheet' type='text/css'>
+        <script src="/js/jquery.windows.js"></script>
     </head>
-    <body style="height:1600px;">  
-        <div class="banner" data-stellar-background-ratio="0.2">
-            <div class="banner-base">
-                <h1>Tony Tamplin</h1>
-                <h2>Programmer // Beer Baron // Gamer</h2>
+    <body style="height:1600px;">
+        <section id="1" class="window">
+            <div class="content">
+                <div class="banner" data-stellar-background-ratio="0.2">
+                    <div class="banner-base"></div>
+                    <div class="nav-bar">
+                        <div class="banner-text">
+                            <h1>Tony Tamplin</h1>
+                            <h2>Programmer // Beer Baron // Gamer</h2>
+                        </div>
+                        <div class="social-icons">
+                            <a href="http://github.com/tonytamps"><img data-toggle="tooltip" title="GitHub" class="desaturate fade" src="/img/github-icon.png" /></a>
+                            <a href="http://au.linkedin.com/in/tonytamps"><img data-toggle="tooltip" title="LinkedIn" class="desaturate fade" src="/img/linkedin-icon.png" /></a>
+                            <a href="http://stackoverflow.com/users/1786920/tony-t"><img data-toggle="tooltip" title="Stack Overflow" class="fade desaturate" src="/img/stackoverflow-icon.png" /></a>
+                            <a href="http://plus.google.com/104327168618872925352/posts"><img data-toggle="tooltip" title="Google+" class="fade desaturate" src="/img/googleplus-icon.png" /></a>
+                            <a href="http://instagram.com/tonytamps"><img data-toggle="tooltip" title="Instagram" class="desaturate fade" src="/img/instagram-icon.png" /></a>
+                            <a href="http://steamcommunity.com/id/ColouredCats/"><img data-toggle="tooltip" title="Steam" class="desaturate fade" src="/img/steam-icon.png" /></a>
+                            <a href="http://twitter.com/tonytamps"><img data-toggle="tooltip" title="Twitter" class="desaturate fade" src="/img/twitter-icon.png" /></a>
+                            <a href="http://facebook.com/tonytamps"><img data-toggle="tooltip" title="Facebook" class="desaturate fade" src="/img/facebook-icon.png" /></a>
+                            <a href="http://last.fm/user/Hooogy"><img data-toggle="tooltip" title="Last.fm" class="desaturate fade" src="/img/lastfm-icon.png" /></a>
+                        </div>
+                    </div>
+                </div> 
             </div>
-        </div>    
-        
-        <div class="content">
+        </section>
 
-        </div>
+        <section id="2" class="window">
+            <div class="content">
+                <h2>How it works</h2>
+                <div class="explanation">This is a light bootstrap that sets up:
+                    <ul>
+                        <li>- the basic SASS for sequential full screen windows</li>
+                        <li>- a jQuery plugin for managing their positions as the user scrolls</li>
+                    </ul>
+                    The plugin simply opens up a handy API for position management, provides callbacks, and will allow for window snapping.  No CSS is applied to the callee.
+                </div>
+            </div>
+        </section>
+
+        <section id="3" class="window">
+            <div class="content">
+               
+            </div>
+        </section>
+
+        <section id="4" class="window">
+            <div class="content">
+               
+            </div>
+        </section>
+
+        <section id="5" class="window">
+            <div class="content">
+               
+            </div>
+        </section>
+
+        <section id="6" class="window">
+            <div class="content">
+               
+            </div>
+        </section>
         
-        <div class="social-icons">
-            <a href="http://github.com/tonytamps"><img data-toggle="tooltip" title="GitHub" class="desaturate" src="/img/github-icon.png" /></a>
-            <a href="http://au.linkedin.com/in/tonytamps"><img data-toggle="tooltip" title="LinkedIn" class="desaturate" src="/img/linkedin-icon.png" /></a>
-            <a href="http://stackoverflow.com/users/1786920/tony-t"><img data-toggle="tooltip" title="Stack Overflow" class="desaturate" src="/img/stackoverflow-icon.png" /></a>
-            <a href="http://plus.google.com/104327168618872925352/posts"><img data-toggle="tooltip" title="Google+" class="desaturate" src="/img/googleplus-icon.png" /></a>
-            <a href="http://instagram.com/tonytamps"><img data-toggle="tooltip" title="Instagram" class="desaturate" src="/img/instagram-icon.png" /></a>
-            <a href="http://steamcommunity.com/id/ColouredCats/"><img data-toggle="tooltip" title="Steam" class="desaturate" src="/img/steam-icon.png" /></a>
-            <a href="http://twitter.com/tonytamps"><img data-toggle="tooltip" title="Twitter" class="desaturate" src="/img/twitter-icon.png" /></a>
-            <a href="http://facebook.com/tonytamps"><img data-toggle="tooltip" title="Facebook" class="desaturate" src="/img/facebook-icon.png" /></a>
-            <a href="http://last.fm/user/Hooogy"><img data-toggle="tooltip" title="Last.fm" class="desaturate" src="/img/lastfm-icon.png" /></a>
-        </div>
         <script type="text/javascript">
-            $(function(){
-                positionIcons();
-                $('[data-toggle=tooltip]').tooltip();
-                $.stellar();
-            });
-            $(window).resize(function() {
-              positionIcons()
-            });
-            function positionIcons(){
-                $('.social-icons').css({
-                    position:'absolute',
-                    left: ($(window).width() - $('.social-icons').outerWidth())/2
-                });
+            function stickyRelocate() {
+                var windowTop = $(window).scrollTop();
+                var bannerHeight = $(".banner").height();
+                var navBarHeight = $(".nav-bar").height();
+                if (windowTop > bannerHeight - navBarHeight) {
+                    $('.nav-bar').addClass('stick');
+                } else {
+                    $('.nav-bar').removeClass('stick');
+                }
             }
+
+            $(function() {
+                $(window).scroll(stickyRelocate);
+                stickyRelocate();
+
+                $('[data-toggle=tooltip]').tooltip();
+
+                $.stellar();
+
+                var $windows = $('.window');
+                $windows.windows({
+                    snapping: true,
+                    snapSpeed: 500,
+                    snapInterval: 900,
+                    onScroll: function(s){},
+                    onSnapComplete: function($el){},
+                    onWindowEnter: function($el){}
+                });
+            });
         </script>
     </body>
 </html>
