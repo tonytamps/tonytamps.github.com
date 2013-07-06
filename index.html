@@ -37,7 +37,7 @@
     <body style="height:1600px;">
         <section id="1" class="window">
             <div class="content">
-                <div class="banner" data-stellar-background-ratio="0.2">
+                <div class="banner" data-stellar-background-ratio="0.1">
                     <div class="banner-base"></div>
                     <div class="nav-bar">
                         <div class="banner-text">
@@ -100,7 +100,7 @@
         <script type="text/javascript">
             function stickyRelocate() {
                 var windowTop = $(window).scrollTop();
-                var bannerHeight = $(".banner").height();
+                var bannerHeight = $(".banner").height() + 200;
                 var navBarHeight = $(".nav-bar").height();
                 if (windowTop > bannerHeight - navBarHeight) {
                     $('.nav-bar').addClass('stick');
@@ -110,12 +110,12 @@
             }
 
             $(function() {
+                $.stellar();
+
                 $(window).scroll(stickyRelocate);
                 stickyRelocate();
 
                 $('[data-toggle=tooltip]').tooltip();
-
-                $.stellar();
 
                 var $windows = $('.window');
                 $windows.windows({

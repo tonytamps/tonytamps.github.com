@@ -1,7 +1,7 @@
 @import "variables.less";
 
-.tooltip-inner { background-color: @tooltipColour; }
-.tooltip.top .tooltip-arrow { border-top-color: @tooltipColour; }
+.tooltip-inner { background-color: @tooltipColour; color: @black; }
+.tooltip.top .tooltip-arrow { border-top-color: @tooltipColour; color: @black; }
 
 .desaturate { 
     &:hover { filter: none; -webkit-filter: grayscale(0); }
@@ -23,14 +23,15 @@ body {
         h1 { font-size: 64px; text-align: center; font-family: 'Montserrat Subrayada', sans-serif; position: absolute; bottom: 45px; left: 15px; }
         h2 { font-size: 31px; line-height: 30px; position: absolute; bottom: 2px; left: 15px; }
         background-color: @backgroundColour;
-        background-size: cover;
         background-repeat: no-repeat;
-        background-image: url('/img/bannerbg.jpg');
-        background-position: left bottom;
+        background-image: url('/img/bannerbg.png');
+        background-position: left top;
         border-radius: 5px;
-        position: relative;
+        position: absolute;
         width: 80%;
-        height: 500px;
+        top: 200px;
+        left: 10%;
+        height: 575px;
         border: 1px solid @backgroundColour;
         margin-left: auto;
         margin-right: auto;
@@ -38,7 +39,7 @@ body {
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 50%;
+            height: 100%;
             background-image: -webkit-gradient(linear, center bottom, center top, from(@backgroundColour), to(transparent));
         }
         .nav-bar {
@@ -58,6 +59,7 @@ body {
         }
     }
 }
+
 
 .window:nth-child(2) .content {
   position: absolute;
