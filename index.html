@@ -14,6 +14,7 @@
         </script>
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Montserrat+Subrayada' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
         <!-- Less -->
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link rel="stylesheet/less" type="text/css" href="/css/tonytamplin.less" />
@@ -33,8 +34,9 @@
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
         <script src="/js/jquery.stellar.min.js"></script>
         <script src="/js/jquery.windows.js"></script>
+        <script src="/js/jquery.smoothwheel.js"></script>
     </head>
-    <body style="height:1600px;">
+    <body>
         <section id="1" class="window">
             <div class="content">
                 <div class="banner" data-stellar-background-ratio="0.1">
@@ -42,7 +44,7 @@
                     <div class="nav-bar">
                         <div class="banner-text">
                             <h1>Tony Tamplin</h1>
-                            <h2>Programmer // Beer Baron // Gamer</h2>
+                            <h2><span>Developer</span> // <span>Beer Baron</span> // <span>Gamer</span></h2>
                         </div>
                         <div class="social-icons">
                             <a href="http://github.com/tonytamps"><img data-toggle="tooltip" title="GitHub" class="desaturate fade" src="/img/github-icon.png" /></a>
@@ -60,40 +62,45 @@
             </div>
         </section>
 
-        <section id="2" class="window">
-            <div class="content">
-                <h2>How it works</h2>
-                <div class="explanation">This is a light bootstrap that sets up:
-                    <ul>
-                        <li>- the basic SASS for sequential full screen windows</li>
-                        <li>- a jQuery plugin for managing their positions as the user scrolls</li>
-                    </ul>
-                    The plugin simply opens up a handy API for position management, provides callbacks, and will allow for window snapping.  No CSS is applied to the callee.
+        <section id="2" class="window" data-stellar-background-ratio="0.1">
+            
+            <div class="content well black-well">
+                <img src="/img/me.png"></img>
+                <div>
+                    <h2>Who am I?</h2>
+                    <div>I am a dynamic figure:
+                        <ul>
+                            <li>- A Software Developer with a newfound love of web development.</li>
+                            <li>- Often found in where craft beer is found.</li>
+                            <li>- With a zealot's passion for music of broad locations and genres.</li>
+                            <li>- Never mistaken for a professional gamer, despite my best efforts.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="3" class="window">
+        <section id="3" class="window" data-stellar-background-ratio="0.1">
             <div class="content">
                
             </div>
         </section>
 
-        <section id="4" class="window">
+        <section id="4" class="window" data-stellar-background-ratio="0.1">
             <div class="content">
                
             </div>
         </section>
 
-        <section id="5" class="window">
+        <section id="5" class="window" data-stellar-background-ratio="0.1">
             <div class="content">
                
             </div>
         </section>
 
-        <section id="6" class="window">
+        <section id="6" class="window" data-stellar-background-ratio="0.1">
             <div class="content">
-               
+
             </div>
         </section>
         
@@ -126,6 +133,8 @@
                     onSnapComplete: function($el){},
                     onWindowEnter: function($el){}
                 });
+
+                $("body").smoothWheel();
             });
         </script>
     </body>
