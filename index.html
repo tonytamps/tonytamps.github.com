@@ -116,25 +116,25 @@
                 }
             }
 
-            $(function() {
+            function init() {
                 $.stellar();
-
-                $(window).scroll(stickyRelocate);
                 stickyRelocate();
+            }
 
+            $(function() {
                 $('[data-toggle=tooltip]').tooltip();
+                $("body").smoothWheel();
+                
+                $(window).scroll(stickyRelocate);
+                $(window).resize(init);
 
+                init();
                 var $windows = $('.window');
                 $windows.windows({
                     snapping: true,
                     snapSpeed: 500,
-                    snapInterval: 900,
-                    onScroll: function(s){},
-                    onSnapComplete: function($el){},
-                    onWindowEnter: function($el){}
+                    snapInterval: 900
                 });
-
-                $("body").smoothWheel();
             });
         </script>
     </body>
