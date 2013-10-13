@@ -1,4 +1,4 @@
-@import "variables.less";
+@import "variables.custom.less";
 
 .tooltip-inner { background-color: @tooltipColour; color: @black; }
 .tooltip.top .tooltip-arrow { border-top-color: @tooltipColour; color: @black; }
@@ -15,7 +15,7 @@
     border: 1px solid @black;
     background-color:rgba(0,0,0,0.6);
     color: @white;
-    padding: 50px;
+    padding: 45px;
 }
 
 .fade {
@@ -26,20 +26,25 @@
 
 html, body { background-color: @backgroundColour; }
 body {
+    padding: @grid-gutter-width;
+    margin-left: auto;
+    margin-right: auto;
     font-family: 'Muli', sans-serif;
+    overflow-x: hidden;
+
     .banner {
+        position: absolute;
+        top: 20%;
+        bottom: 20%;
+        left: @grid-gutter-width;
+        right: @grid-gutter-width;
         background-color: @backgroundColour;
         background-repeat: no-repeat;
         background-image: url('/img/Tinge.png');
         border-radius: 5px;
-        position: absolute;
-        width: 80%;
-        top: 200px;
-        left: 10%;
         height: 575px;
         border: 1px solid @backgroundColour;
-        margin-left: auto;
-        margin-right: auto;
+
         .banner-base {
             position: absolute;
             bottom: 0;
@@ -47,35 +52,67 @@ body {
             height: 100%;
             background-image: -webkit-gradient(linear, center bottom, center top, from(@backgroundColour), to(transparent));
         }
+
         .nav-bar {
-            &.stick { position: fixed; top: 0; z-index: 10000; width: 80%; }
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 120px;
+            position:absolute; 
+            bottom: 0px;  
+            left: 0px;
+            right: 0px;
+            margin-bottom:5px; 
+            text-align: center;
+            color: @bannerTextColour; text-shadow: 2px 2px 2px #000000; 
+
             .banner-text { 
-                h1 { font-size: 64px; text-align: center; font-family: 'Montserrat Subrayada', sans-serif; position: absolute; bottom: 45px; left: 15px; }
+                h1 { 
+                    line-height: 45px;
+                    margin: 0px;
+                    font-size: 64px; 
+                    font-family: 'Montserrat Subrayada', sans-serif;
+                    @media (min-width: @screen-md) {
+                        text-align: left;
+                        padding-left: 40px;
+                    }
+                }
+            }   
+
+            .banner-subtext{
                 h2 { 
-                    font-size: 28px; 
-                    line-height: 30px; 
-                    position: absolute; 
-                    bottom: 2px; 
-                    left: 15px; 
+                    font-size: 31px; 
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    @media (min-width: @screen-md) {
+                        text-align: left;
+                        padding-left: 40px;
+                    }
+                    white-space:nowrap;
                     span {
-                        padding-right: 11px;
-                        padding-left: 11px;
+                        padding-right: 13px;
+                        padding-left: 13px;
                         &:first-child { padding-left: 0px; }
                         &:last-child { padding-right: 0px; }
                     }
                 }
-                color: @bannerTextColour; text-shadow: 2px 2px 2px #000000; 
-            }
-            .social-icons {
-                img { width: 32px; height: 32px; }
-                position: absolute;
-                width: 325px;
-                right: 20px;
-                bottom: 42px;
+
+                .social-icons {
+                    &.stick { position: fixed; top: 0; z-index: 10000; width: 80%; }
+                    margin-bottom: 20px;
+                    margin-top: 20px;
+                    @media (min-width: @screen-md) {
+                        text-align: right;
+                        padding-right: 40px;
+                    }
+                    a {
+                        padding-left: 10px;
+                        @media (min-width: @screen-sm) { padding-left: 15px; }
+                        @media (min-width: @screen-md) { padding-left: 5px; }
+                        @media (min-width: @screen-lg) { padding-left: 15px; }
+                        &:first-child { padding-left: 0px; }
+                    }
+                    img { 
+                        width: 32px; 
+                        height: 32px; 
+                    }
+                }
             }
         }
     }
@@ -84,8 +121,10 @@ body {
 .window {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position:absolute;
     background-repeat: no-repeat;
+    left: 0px;
+    right: 20px;
 }
 
 .window:nth-child(1) {
@@ -97,29 +136,54 @@ body {
     background-image: @window2;
     top: 100%;
 
+    padding: @grid-gutter-width;
+
     .content {
+        margin-top: 10%;
         color: skyblue;
-        >div { float: left; margin-top: 90px; }
-        img { float: left; margin-right: 90px; }
-        font-size: 1.4em;
-        line-height: 28px;
-        ul { list-style-type: none; }
-        ul li { line-height: 28px; }
-        position: absolute;
-        top: 25%;
-        left: 10%;
-        width: 75%
+        h2 { margin-top: 20px; }
+        div {
+            font-size: 20px;
+            ul { margin-top: 10px; list-style-type: none; }
+            ul li { line-height: 28px; font-size: 14px; }
+        }
+        
     }
 }
 
 .window:nth-child(3) {
     background-image: @window3;
     top: 200%;
+
+    padding: @grid-gutter-width;
+
+    .content {
+        margin-top: 10%;
+        color: skyblue;
+        h3 { margin-top: 0px; }
+        div {
+            font-size: 20px;
+            ul { margin-top: 10px; list-style-type: none; }
+            ul li { line-height: 28px; font-size: 14px; }
+        }
+        
+    }
 }
 
 .window:nth-child(4) {
     background-image: @window4;
     top: 300%;
+    color: skyblue;
+    font-family: 'Indie Flower', cursive;
+    h1 {font-family: 'Indie Flower', cursive;}
+    .content {
+        font-size: 20px;
+        position: abosolute;
+        top: 25%;
+        bottom: 25%;
+        left: @grid-gutter-width;
+        right: @grid-gutter-width;
+    }
 }
 
 .window:nth-child(5) {

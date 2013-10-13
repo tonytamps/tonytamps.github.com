@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tony Tamplin</title>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -15,8 +16,9 @@
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Montserrat+Subrayada' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
         <!-- Less -->
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet/less" type="text/css" href="/css/tonytamplin.less" />
         <script type="text/javascript">
             less = {
@@ -31,31 +33,33 @@
         <!-- JS -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.3.3/less.min.js" type="text/javascript"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
-        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>
         <script src="/js/jquery.stellar.min.js"></script>
         <script src="/js/jquery.windows.js"></script>
         <script src="/js/jquery.smoothwheel.js"></script>
     </head>
     <body>
         <section id="1" class="window">
-            <div class="content">
-                <div class="banner" data-stellar-background-ratio="0.1">
+            <div class="content row">
+                <div class="banner container " data-stellar-background-ratio="0.1">
                     <div class="banner-base"></div>
                     <div class="nav-bar">
-                        <div class="banner-text">
-                            <h1>Tony Tamplin</h1>
-                            <h2><span>Developer</span> // <span>Beer Baron</span> // <span>Gamer</span></h2>
+                        <div class="banner-text row">
+                            <h1 class="col-md-12">Tony Tamplin</h1>
                         </div>
-                        <div class="social-icons">
-                            <a href="http://github.com/tonytamps"><img data-toggle="tooltip" title="GitHub" class="desaturate fade" src="/img/github-icon.png" /></a>
-                            <a href="http://au.linkedin.com/in/tonytamps"><img data-toggle="tooltip" title="LinkedIn" class="desaturate fade" src="/img/linkedin-icon.png" /></a>
-                            <a href="http://stackoverflow.com/users/1786920/tony-t"><img data-toggle="tooltip" title="Stack Overflow" class="fade desaturate" src="/img/stackoverflow-icon.png" /></a>
-                            <a href="http://plus.google.com/104327168618872925352/posts"><img data-toggle="tooltip" title="Google+" class="fade desaturate" src="/img/googleplus-icon.png" /></a>
-                            <a href="http://instagram.com/tonytamps"><img data-toggle="tooltip" title="Instagram" class="desaturate fade" src="/img/instagram-icon.png" /></a>
-                            <a href="http://steamcommunity.com/id/ColouredCats/"><img data-toggle="tooltip" title="Steam" class="desaturate fade" src="/img/steam-icon.png" /></a>
-                            <a href="http://twitter.com/tonytamps"><img data-toggle="tooltip" title="Twitter" class="desaturate fade" src="/img/twitter-icon.png" /></a>
-                            <a href="http://facebook.com/tonytamps"><img data-toggle="tooltip" title="Facebook" class="desaturate fade" src="/img/facebook-icon.png" /></a>
-                            <a href="http://last.fm/user/Hooogy"><img data-toggle="tooltip" title="Last.fm" class="desaturate fade" src="/img/lastfm-icon.png" /></a>
+                        <div class="banner-subtext row">
+                            <h2 class="col-md-6"><span>Developer</span> // <span>Beer Baron</span> // <span>Gamer</span></h2>
+                            <div class="social-icons col-md-6">
+                                <a href="http://github.com/tonytamps"><img data-toggle="tooltip" title="GitHub" class="desaturate fade img-responsive" src="/img/github-icon.png" /></a>
+                                <a href="http://au.linkedin.com/in/tonytamps"><img data-toggle="tooltip" title="LinkedIn" class="desaturate fade img-responsive" src="/img/linkedin-icon.png" /></a>
+                                <a href="http://stackoverflow.com/users/1786920/tony-t"><img data-toggle="tooltip" title="Stack Overflow" class="fade desaturate img-responsive" src="/img/stackoverflow-icon.png" /></a>
+                                <a href="http://plus.google.com/104327168618872925352/posts"><img data-toggle="tooltip" title="Google+" class="fade desaturate img-responsive" src="/img/googleplus-icon.png" /></a>
+                                <a href="http://instagram.com/tonytamps"><img data-toggle="tooltip" title="Instagram" class="desaturate fade img-responsive" src="/img/instagram-icon.png" /></a>
+                                <a href="http://steamcommunity.com/id/ColouredCats/"><img data-toggle="tooltip" title="Steam" class="desaturate fade img-responsive" src="/img/steam-icon.png" /></a>
+                                <a href="http://twitter.com/tonytamps"><img data-toggle="tooltip" title="Twitter" class="desaturate fade img-responsive" src="/img/twitter-icon.png" /></a>
+                                <a href="http://facebook.com/tonytamps"><img data-toggle="tooltip" title="Facebook" class="desaturate fade img-responsive" src="/img/facebook-icon.png" /></a>
+                                <a href="http://last.fm/user/Hooogy"><img data-toggle="tooltip" title="Last.fm" class="desaturate fade img-responsive" src="/img/lastfm-icon.png" /></a>
+                            </div>
                         </div>
                     </div>
                 </div> 
@@ -63,16 +67,16 @@
         </section>
 
         <section id="2" class="window" data-stellar-background-ratio="0.1">
-            
-            <div class="content well black-well">
-                <img src="/img/me.png"></img>
-                <div>
+            <div class="content well black-well row container">
+                <img src="/img/me.png" class="img-responsive col-md-6"></img>
+                <div class="col-md-6">
                     <h2>Who am I?</h2>
                     <div>I am a dynamic figure:
                         <ul>
                             <li>- A Software Developer with a newfound love of web development.</li>
+                            <li>- Impossibly curious about technology.</li>
                             <li>- Often found in where craft beer is found.</li>
-                            <li>- With a zealot's passion for music of broad locations and genres.</li>
+                            <li>- With a zealot's passion for music of any genre or region.</li>
                             <li>- Never mistaken for a professional gamer, despite my best efforts.</li>
                         </ul>
                     </div>
@@ -81,29 +85,56 @@
         </section>
 
         <section id="3" class="window" data-stellar-background-ratio="0.1">
-            <div class="content">
-               
+            <div class="row container">
+                <div class="content  col-md-5">
+                    <h3>Where I am...</h3>
+                    <p>Developing web front-ends and C#.NET back-ends using any technology or framework I can get my hands on. I'm not satisfied until I have tried it myself and therefore spend a lot of my time cutting experimental / prototype code.</p>
+                    <p>Deeply interested in home automation and neural networks. The thought of a house that can learn is one I cannot shake.</p>
+                </div>
+                <div class="content  col-md-5 col-md-offset-2">
+                    <h3>Where I want to be...</h3>
+                    <p>Developing.</p>
+                    <p>I've found no satisfaction greater than creating a clean and successful solution to a problem. Until the day I find something better, I want nothing else.</p>
+                    <p>Continue using the most suitable technology for the task at hand in an environment encouraging creativity.</p>
+                </div>
+            </div>
+            <div class="row container content  col-md-12">
+                <h3>What I know and love...</h3>
+                <div>
+                    <ul>
+                        <li>- C#.Net</li>
+                        <li>- MongoDB / SQL</li>
+                        <li>- CQRS / Event Sourcing</li>
+                        <li>- MVC / MVVM</li>
+                        <li>- HTML </li>
+                        <li>- Javascript / jQuery</li>
+                        <li>- CSS / LESS</li>
+                        <li>- Git</li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
             </div>
         </section>
 
         <section id="4" class="window" data-stellar-background-ratio="0.1">
+            <div class="row container content  col-md-12">
+                <h1>Why I made this site...</h3>
+                <p>Checkout Bootstrap 3's new features, like responsive design =D</p>
+            </div>
+        </section>
+
+<!--         <section id="5" class="window" data-stellar-background-ratio="0.1">
             <div class="content">
                
             </div>
         </section>
-
-        <section id="5" class="window" data-stellar-background-ratio="0.1">
-            <div class="content">
-               
-            </div>
-        </section>
-
-        <section id="6" class="window" data-stellar-background-ratio="0.1">
+ -->
+<!--         <section id="6" class="window" data-stellar-background-ratio="0.1">
             <div class="content">
 
             </div>
         </section>
-        
+ -->        
         <script type="text/javascript">
             function stickyRelocate() {
                 var windowTop = $(window).scrollTop();
