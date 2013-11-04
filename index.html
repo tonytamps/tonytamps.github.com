@@ -34,14 +34,13 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.3.3/less.min.js" type="text/javascript"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>
-        <script src="/js/jquery.stellar.min.js"></script>
         <script src="/js/jquery.windows.js"></script>
         <script src="/js/jquery.smoothwheel.js"></script>
     </head>
     <body>
         <section id="1" class="window">
             <div class="content row">
-                <div class="banner container " data-stellar-background-ratio="0.1">
+                <div class="banner container ">
                     <div class="banner-base"></div>
                     <div class="nav-bar">
                         <div class="banner-text row">
@@ -65,107 +64,9 @@
                 </div> 
             </div>
         </section>
-
-        <section id="2" class="window" data-stellar-background-ratio="0.1">
-            <div class="content well black-well row container">
-                <img src="/img/me.png" class="img-responsive col-md-6"></img>
-                <div class="col-md-6">
-                    <h2>Who am I?</h2>
-                    <div>I am a dynamic figure:
-                        <ul>
-                            <li>- A Software Developer with a newfound love of web development.</li>
-                            <li>- Impossibly curious about technology.</li>
-                            <li>- Often found in where craft beer is found.</li>
-                            <li>- With a zealot's passion for music of any genre or region.</li>
-                            <li>- Never mistaken for a professional gamer, despite my best efforts.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="3" class="window" data-stellar-background-ratio="0.1">
-            <div class="row container">
-                <div class="content  col-md-5">
-                    <h3>Where I am...</h3>
-                    <p>Developing web front-ends and C#.NET back-ends using any technology or framework I can get my hands on. I'm not satisfied until I have tried it myself and therefore spend a lot of my time cutting experimental / prototype code.</p>
-                    <p>Deeply interested in home automation and neural networks. The thought of a house that can learn is one I cannot shake.</p>
-                </div>
-                <div class="content  col-md-5 col-md-offset-2">
-                    <h3>Where I want to be...</h3>
-                    <p>Developing.</p>
-                    <p>I've found no satisfaction greater than creating a clean and successful solution to a problem. Until the day I find something better, I want nothing else.</p>
-                    <p>Continue using the most suitable technology for the task at hand in an environment encouraging creativity.</p>
-                </div>
-            </div>
-            <div class="row container content  col-md-12">
-                <h3>What I know and love...</h3>
-                <div>
-                    <ul>
-                        <li>- C#.Net</li>
-                        <li>- MongoDB / SQL</li>
-                        <li>- CQRS / Event Sourcing</li>
-                        <li>- MVC / MVVM</li>
-                        <li>- HTML </li>
-                        <li>- Javascript / jQuery</li>
-                        <li>- CSS / LESS</li>
-                        <li>- Git</li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </section>
-
-        <section id="4" class="window" data-stellar-background-ratio="0.1">
-            <div class="row container content  col-md-12">
-                <h1>Why I made this site...</h3>
-                <p>Checkout Bootstrap 3's new features, like responsive design =D</p>
-            </div>
-        </section>
-
-<!--         <section id="5" class="window" data-stellar-background-ratio="0.1">
-            <div class="content">
-               
-            </div>
-        </section>
- -->
-<!--         <section id="6" class="window" data-stellar-background-ratio="0.1">
-            <div class="content">
-
-            </div>
-        </section>
- -->        
         <script type="text/javascript">
-            function stickyRelocate() {
-                var windowTop = $(window).scrollTop();
-                var bannerHeight = $(".banner").height() + 200;
-                var navBarHeight = $(".nav-bar").height();
-                if (windowTop > bannerHeight - navBarHeight) {
-                    $('.nav-bar').addClass('stick');
-                } else {
-                    $('.nav-bar').removeClass('stick');
-                }
-            }
-
-            function init() {
-                $.stellar();
-                stickyRelocate();
-            }
-
             $(function() {
                 $('[data-toggle=tooltip]').tooltip();
-                $("body").smoothWheel();
-                
-                $(window).scroll(stickyRelocate);
-                $(window).resize(init);
-
-                init();
-                var $windows = $('.window');
-                $windows.windows({
-                    snapping: true,
-                    snapSpeed: 500,
-                    snapInterval: 900
-                });
             });
         </script>
     </body>
