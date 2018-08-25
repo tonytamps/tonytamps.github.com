@@ -1,4 +1,4 @@
-tonytamps.github.com (http://tonytamplin.com)
+tonytamps.github.com (https://tonytamplin.com)
 ====================
 Sandbox / testing bed for new web technologies or ideas I'm interested in learning or experimenting with.
 
